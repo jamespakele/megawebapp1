@@ -7,6 +7,7 @@ def get_todos(file_path=FIlEPATH):
     """
     with open(file_path, 'r') as file_local:
         todos_local = file_local.readlines()
+    """ Remove linebreaks from list data """
     for index, todo in enumerate(todos_local):
         todos_local[index] = todo.strip('\n')
     return todos_local
